@@ -11,6 +11,8 @@
 - 持续汇总可验证进展，并在图上显示任务状态、证据和持续时间。
 - 导出研究成果与续接状态，在其他机器重建环境后继续执行。
 
+第一阶段题库已选定为 [The Last Math Competition](https://github.com/The-Last-Math-Competition/The-Last-Math-Competition)，尚未导入或运行求解。
+
 ## 文档
 
 研究、调研与设计统一放在 [docs/](docs/README.md)。

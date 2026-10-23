@@ -27,7 +27,7 @@ Lean 内核检查的是给定形式化命题。自然语言题意的忠实程度
 
 ## 最小工具与执行权限
 
-Worker 的核心工具建议为受限 read、write/patch、search、lean_check、lean_goal 和 submit。进度 update 可补充意图与阻塞，但不是心跳或验收的唯一来源。read/search 可访问当前任务及已批准共享库；write 只修改当前任务的证明和研究笔记。冻结题目、工具链、依赖配置、验证器和其他 Worker 目录均不可修改。
+工具包按具体任务配置；依赖环境、数据权限、资源要求和验收方法需一并定义，见[数学与生物工具包调研](toolkits.md)。数学Worker的核心工具建议为受限 read、write/patch、search、lean_check、lean_goal 和 submit。进度 update 可补充意图与阻塞，但不是心跳或验收的唯一来源。read/search 可访问当前任务及已批准共享库；write 只修改当前任务的证明和研究笔记。冻结题目、工具链、依赖配置、验证器和其他 Worker 目录均不可修改。
 
 不开放通用 shell、任意可执行文件路径或安装依赖工具。Lean 工具由后端映射到固定命令和参数。所有模型密钥只在受信后端持有。联网检索如后续需要，另提供受控服务；证明执行器自身默认无网络。
 
@@ -63,9 +63,9 @@ KV 缓存是模型服务的计算优化，不是节点数据库。不能直接�
 
 ## 题库与评测
 
-主候选是 google-deepmind/formal-conjectures，已有 Lean/mathlib 声明、问题来源和稳定 benchmark 标签，包含 Erdős 问题。按领域、难度线索、定义依赖和当前解题状态筛选，固定版本，不把所有 sorry 一律当作未解问题。
+2026-10-23 确认第一阶段题库使用 [The Last Math Competition](https://github.com/The-Last-Math-Competition/The-Last-Math-Competition)。已读取上游提交 b355e42906e6eaf52bc7e9d005e0ef02d8aa7400 的说明、题目样例和metadata字段；本项目尚未导入题库或运行求解。题目入口是中英文自然语言描述，需先确认定义和条件，再生成并审核Lean声明。求解包含证明或证伪。
 
-先以 miniF2F 的 Lean 4 版本少量已知可解题验证闭环，再用 PutnamBench 观察难度提升，最终单列开放猜想队列。已知可解题的结果只衡量工程与求证能力，不当作新数学发现；公开题还可能受模型训练记忆影响。开放猜想在预算内未解，不能解释为系统失败或猜想为假。
+此前建议的formal-conjectures、miniF2F Lean 4和PutnamBench保留为后续比较来源，不作为第一阶段默认题库。用户提交猜想，主Agent处理题意、分工和完成要求；影响命题的歧义才向用户确认。输入固定为题目包，输出为结论、证据、验证和续接记录。未解决或题意待澄清也是有效状态；在预算内未解不能推断猜想为假。
 
 题目入库保留来源 URL、上游 commit、原文、正式声明、状态核查日期、版本和许可。新颖性检查与证明正确性检查分别保存。第一版题库不需要自动爬全网。
 

@@ -23,7 +23,8 @@
 
 | 来源 | 计划用途 | 注意事项 |
 | --- | --- | --- |
-| [Formal Conjectures](https://github.com/google-deepmind/formal-conjectures) | 开放研究题库主候选，已有 Lean/mathlib 声明、来源和稳定 benchmark 标签，包含 Erdős 问题 | 固定版本并核对解题状态；声明忠实程度、新颖性和证明正确性分别检查 |
+| [The Last Math Competition](https://github.com/The-Last-Math-Competition/The-Last-Math-Competition) | 2026-10-23确认的第一阶段题库；中英文Markdown题目、metadata和solutions | 已查提交b355e42906e6eaf52bc7e9d005e0ef02d8aa7400；需先确认题意再形式化，接受证明或证伪，尚未导入/复验上游解答 |
+| [Formal Conjectures](https://github.com/google-deepmind/formal-conjectures) | 后续比较来源，已有 Lean/mathlib 声明、来源和稳定 benchmark 标签，包含 Erdős 问题 | 非第一阶段默认题库；固定版本并核对解题状态 |
 | [miniF2F Lean 4](https://github.com/yangky11/miniF2F-lean4) | 少量已知可解题的工程校准 | 公开题可能受训练记忆影响；不作为新数学发现 |
 | [PutnamBench](https://github.com/trishullab/PutnamBench) | 检查更难竞赛问题的求证能力 | 固定工具链与题目版本，不能与开放猜想直接混算 |
 
@@ -41,6 +42,10 @@
 - [Lean 官方 IO 说明](https://lean-lang.org/functional_programming_in_lean/Hello___-World___/Additional-Conveniences/)确认 #eval 能执行 IO，故不给 Python 不能代替隔离 Lean 进程。
 - [Anthropic sandbox-runtime](https://github.com/anthropics/sandbox-runtime)可对本机进程施加文件与网络限制。macOS 使用 sandbox-exec；默认广泛读取，需要显式收紧并做逃逸负向验证。参考 [Apple 仓库中的弃用讨论](https://github.com/apple/containerization/issues/737)，隔离后端应可替换。
 - [React Flow 官方思维导图教程](https://reactflow.dev/learn/tutorials/mind-map-app-with-react-flow)可参考节点编辑、依赖连接和交互；项目拟用其构建研究图，尚未实现。
+
+## 按任务配置工具包
+
+2026-10-23补充核验Lean交互、Numina、Biopython、nf-core/rnaseq、AlphaFold 3和Nextflow官方资料。数学可先用受限读写、Lean反馈和本地库查找；生物按任务绑定依赖、数据和计算资源。接口数量不等于依赖数量，工具执行成功不等于科学结论成立。详见[工具包调研](toolkits.md)。
 
 ## 下一步要取得的实测证据
 
