@@ -2,6 +2,8 @@
 
 日期：2026-10-24。状态：已读发布者文档及相关源码；未安装、启动或测试插件。Pi有Goal扩展能力，生态中有多个同名插件，不存在仅凭“pi-goal”名字就能确定的统一实现。
 
+当前决定已变更：用户同日改选Codex，不再推进本文插件集成。本文保留源码学习记录；当前接法见[Codex与Claude Code](codex-integration.md)。
+
 ## Michaelliv/pi-goal：简单的同会话续跑
 
 读取[入口源码](https://github.com/Michaelliv/pi-goal/blob/main/.pi/extensions/pi-goal/index.ts)、[状态逻辑](https://github.com/Michaelliv/pi-goal/blob/main/.pi/extensions/pi-goal/goal-state.ts)和[package.json](https://github.com/Michaelliv/pi-goal/blob/main/package.json)。仓库声明版本为0.1.7。

@@ -11,7 +11,7 @@
 - 持续汇总可验证进展，并在图上显示任务状态、证据和持续时间。
 - 导出研究成果与续接状态，在其他机器重建环境后继续执行。
 
-首版执行引擎已确定为Pi SDK，TS后台直接嵌入，复用会话、上下文与Tool循环；项目补充调度、受限工具、成果图和导出，不采用Mastra。尚未安装或集成。
+首版执行引擎已改选Codex，拟由TS后台对接Codex app-server，复用原生Goal、自动权限审核和会话管理；停止推进Pi插件集成。OpenCode等外部模型仍是要求，指定DeepSeek的协议兼容与审核组合待验证。尚未集成，详见[Codex与Claude Code比较](docs/codex-integration.md)。
 
 第一阶段题库已选定为 [The Last Math Competition](https://github.com/The-Last-Math-Competition/The-Last-Math-Competition)，尚未导入或运行求解。
 
@@ -19,7 +19,7 @@
 
 研究、调研与设计统一放在 [docs/](docs/README.md)。
 
-- [整体架构](docs/architecture.md)：首版Pi SDK、TS业务后台、分方向协作与同题多次尝试、领域替换。
+- [整体架构](docs/architecture.md)：首版Codex接入、TS业务后台、分方向协作与同题多次尝试、领域替换。
 - [整体规划](docs/plan.md)：证明过程、受限工具、监督与进度图、迁移和首个核心边界。
 - [同类项目与资料调研](docs/research.md)：开源项目对比、题库来源、模型接入和待验证项。
 

@@ -1,6 +1,6 @@
 # 两页GUI与模型接入
 
-日期：2026-10-23。状态：界面范围与TypeScript后端为用户要求；桌面框架为助手建议。只规划，未实现、打包或调用模型。
+日期：2026-10-24。状态：界面范围与TypeScript后端为用户要求；桌面框架为助手建议。只规划，未实现、打包或调用模型。
 
 ## 用户确定的界面范围
 
@@ -28,7 +28,7 @@ API Key通过本机凭据配置提供，不写进证明目录或导出包。计�
 | 桌面外壳 | Electron | 提供应用窗口并管理本机后台生命周期 |
 | 前端 | React、TypeScript、Vite | 配置表单、对话框和节点详情 |
 | 导图 | React Flow | 节点、连线、选择、缩放与自定义成果节点 |
-| 后台 | Node.js、TypeScript与Pi SDK | Pi负责会话与Tool循环，项目负责全局调度、文件权限和业务流程；Pi已选定，桌面框架仍为建议 |
+| 后台 | Node.js、TypeScript与Codex app-server | 复用Codex会话、Goal和自动审核，项目负责业务流程；用户已改选Codex，接入未实测，桌面框架仍为建议 |
 
 [Electron进程文档](https://www.electronjs.org/docs/latest/tutorial/process-model)说明主进程具有Node.js能力，界面运行于渲染进程；[React Flow文档](https://reactflow.dev/learn/concepts/terms-and-definitions)说明节点、连线和选择等交互。这里是选型依据，不是本项目已完成的性能或三端验收。
 
@@ -45,5 +45,7 @@ Tauri也能通过[sidecar机制](https://v2.tauri.app/develop/sidecar/)打包外
 本次核验的DeepSeek模型ID为deepseek-v4.1-flash，完整请求地址为https://opencode.ai/inference/go/openai/v1/chat/completions。配置Base URL可填https://opencode.ai/inference/go/openai/v1，后端再按接口拼接请求路径。
 
 建议自建客户端如实标识ParrelSolveInstantProblem及版本，稳定区分各对话。Lean源码编写与验证接近编码Agent用法；官方未单独确认本项目批量科研场景或承诺100路并发。接入后仍须遵守额度与服务限制；不以伪装客户端或轮换身份规避限制。
+
+2026-10-24补充：用户改选Codex。Go有官方Codex配置，但Codex自定义provider要求Responses；上述DeepSeek当前列出的Chat Completions接口不能仅改地址就认定直连可用。详见[运行时比较与接入](codex-integration.md)，不自动更换用户指定模型。
 
 当前只读官方说明，未验证用户密钥、发送推理请求、购买服务或安装客户端。模型地址与名字保留可配置，避免产品绑定单一套餐。
