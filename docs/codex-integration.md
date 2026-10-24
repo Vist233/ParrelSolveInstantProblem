@@ -81,6 +81,10 @@ dynamicTools当前为实验接口，需要显式启用并锁定所用版本。�
 
 Pi依据其[模型文档](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/models.md)、[OpenCode Pi接入说明](https://opencode.ai/v2/docs/console/harnesses/pi/)和已归档[Goal源码调研](pi-goal-implementations.md)。Claude Code依据[Goal文档](https://code.claude.com/docs/en/goal)、[权限模式](https://code.claude.com/docs/en/permission-modes)及[网关支持边界](https://code.claude.com/docs/en/llm-gateway)。OpenCode另有部分非Claude模型的接入说明，与Anthropic官方支持范围应分开，不将两者合并为功能保证。
 
+## TS封装如何承接项目流程
+
+用户进一步将讨论收窄到Codex与Claude Code的封装：每个工作会话用自己的Goal执行任务，TS管理并发、模型、过程查看、clone汇报与整理。集中说明见[TS封装与任务运行](runtime-wrapper.md)。不再展开Pi或重写Goal；CLI明确支持的能力与SDK尚待确认的接法分别记录。
+
 ## 下一步只验证一条链路
 
 后续进入实施前，先锁定Codex版本与模型协议接法。实施时仅验证一个工作线程：外接指定模型 → 直接调用一个受限Tool → 原生Goal继续下一轮 → 真实触发并观察Auto-review → 正确暂停和恢复。先核对模型、Goal和审核能一起运行，再扩到20分钟汇报及多Agent。

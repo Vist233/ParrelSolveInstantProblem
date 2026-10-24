@@ -54,6 +54,8 @@ Electron、React、React Flow仍为[桌面GUI候选](gui-and-model-access.md)，
 单Agent行为见[持续证明](continuous-proof.md)。连续三轮自主排障仍受阻才上报主管的要求保留；不能将审核的拒绝次数直接当作证明阻塞轮数，也不能仅凭Goal完成标记认可数学证明。
 
 
+TS如何对接两个后端、控制活跃Goal及分出20分钟汇报，集中见[TS封装与任务运行](runtime-wrapper.md)。这是Agent执行模块内部的适配设计，不增加一套研究工作流框架。
+
 ## 五个后台模块
 
 | 模块 | 对外承担的能力 | 内部负责、避免向外扩散的细节 |
