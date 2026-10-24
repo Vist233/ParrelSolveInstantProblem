@@ -28,7 +28,7 @@ API Key通过本机凭据配置提供，不写进证明目录或导出包。计�
 | 桌面外壳 | Electron | 提供应用窗口并管理本机后台生命周期 |
 | 前端 | React、TypeScript、Vite | 配置表单、对话框和节点详情 |
 | 导图 | React Flow | 节点、连线、选择、缩放与自定义成果节点 |
-| 后台 | Node.js、TypeScript | 会话调度、Tool调用、文件权限、模型请求与整理Agent |
+| 后台 | Node.js、TypeScript与Pi SDK | Pi负责会话与Tool循环，项目负责全局调度、文件权限和业务流程；Pi已选定，桌面框架仍为建议 |
 
 [Electron进程文档](https://www.electronjs.org/docs/latest/tutorial/process-model)说明主进程具有Node.js能力，界面运行于渲染进程；[React Flow文档](https://reactflow.dev/learn/concepts/terms-and-definitions)说明节点、连线和选择等交互。这里是选型依据，不是本项目已完成的性能或三端验收。
 
