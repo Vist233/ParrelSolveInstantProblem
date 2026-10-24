@@ -43,6 +43,8 @@ flowchart TB
 
 Electron、React、React Flow仍为[桌面GUI候选](gui-and-model-access.md)，尚未选定。业务后台独立于窗口代码；以后放到服务器上时，主要增加连接与部署适配。
 
+首版引擎仍待比较。Pi直接嵌入与Mastra运行管理两种接法、各自需要自建的内容，以及恢复和上下文分支的限制，见[Pi与Mastra比较](pi-vs-mastra.md)。本轮不锁定引擎或引入依赖。
+
 ## 五个后台模块
 
 | 模块 | 对外承担的能力 | 内部负责、避免向外扩散的细节 |
