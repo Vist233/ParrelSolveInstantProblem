@@ -10,6 +10,8 @@
 
 | 文档 | 内容 | 状态 |
 | --- | --- | --- |
+| [单Agent持续证明](continuous-proof.md) | 同会话自动续做、Lean完成门槛、三轮阻塞后上报主管 | 续跑设计，三轮规则已明确，未实现 |
+| [Pi Goal实现调研](pi-goal-implementations.md) | 两种Goal源码、实际续跑事件、状态与适配缺口 | 2026-10-24源码核验，插件未选定 |
 | [Pi与Mastra比较](pi-vs-mastra.md) | 两种接法、能力边界、上下文汇报及恢复代价 | 比较后确定首版Pi SDK，未实现 |
 | [整体架构](architecture.md) | 首版Pi SDK与TS业务后台，按《软件设计的哲学》划分模块及替换边界 | Pi已选定，模块设计未实现 |
 | [记录与导出](records-and-export.md) | 一题一目录、原始会话和汇报、项目ZIP与跨机续接 | 设计建议，未实现或导出实测 |

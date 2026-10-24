@@ -51,6 +51,8 @@ Electron、React、React Flow仍为[桌面GUI候选](gui-and-model-access.md)，
 
 20分钟汇报仍从确定上下文截止点建立独立汇报状态，原证明继续；实现时验证所选Pi版本的具体分支接口。百会话的实际资源占用和并发能力仍待测。
 
+持续证明的具体机制见[单Agent持续证明](continuous-proof.md)，现成插件源码见[Pi Goal实现调研](pi-goal-implementations.md)。用户已明确同一Goal连续三轮自主排障仍受阻才标记blocked并向主管发布阻塞事件；默认20分钟汇报独立运行。Goal插件尚未选定，不因已确定Pi SDK就认为插件无需适配。
+
 ## 五个后台模块
 
 | 模块 | 对外承担的能力 | 内部负责、避免向外扩散的细节 |
