@@ -4,12 +4,13 @@
 
 当前决定（2026-10-23）：先完成数学，只用受限工具和任务文件夹控制访问。自己的工作区可写，共享skill和冻结输入只读，其他目录拒绝访问；复杂沙盒、三端适配和通用执行平台留待后续。已明确默认每20分钟分出汇报对话、子证明目录提交workflow及成果分支延长规则；继续规划，不写产品代码。
 
-执行引擎（2026-10-24最新）：用户改选Codex，停止推进Pi首版方案；拟通过app-server复用原生Goal、自动审核和线程管理。继续比较Claude Code，外接OpenCode及指定DeepSeek的协议与审核组合仍待验证，只做规划。
+执行引擎（2026-10-24最新）：用户改选Codex，停止推进Pi首版方案；拟通过app-server复用原生Goal、自动审核和线程管理。继续比较Claude Code，外接OpenCode及指定DeepSeek的协议与审核组合仍待验证。10月25日另获授权测试MiMo：原生Goal与Tool通过，自动审核遇到协议阻塞；未实现产品。
 
 接口约定：项目只直接配置Tool，不采用MCP。主Agent连接用户与所有子Agent，负责初始化、方向分配、逐个巡查和运行中调整，可查看项目内各会话、执行状态与证明文件，并检索网上已有证明。
 
 | 文档 | 内容 | 状态 |
 | --- | --- | --- |
+| [Codex＋MiMo实测](codex-mimo-probe.md) | 真实 Tool 调用、原生三轮 Goal 自动续做、Auto-review 协议阻塞 | 2026-10-25有界实测，Goal通过、审核未通过 |
 | [Codex配置与工具接入](codex-setup-and-tools.md) | 首版架构、URL/API Key、Auto-review、项目Tool与内置工具替换边界 | 2026-10-25官方文档核验与配置示例，未启动 |
 | [TS封装与任务运行](runtime-wrapper.md) | 独立Goal会话、TS调用、活跃并发、过程观察、clone汇报与整理上报 | 2026-10-24接口核验与设计，未运行 |
 | [Codex与Claude Code接入比较](codex-integration.md) | 原生Goal、自动审核、外部模型协议与app-server接入 | 用户改选Codex；官方文档核验，未运行 |
@@ -25,4 +26,4 @@
 | [汇报与成果图流程](reporting-workflow.md) | 先搜索再证明、默认20分钟汇报、submit_skill工具、独立整理Agent及成果图 | 用户流程已明确，未实现 |
 | [文件隔离方案](file-isolation.md) | Linux与三端隔离候选，保留作后续参考 | 后续备用，非数学首版前置要求 |
 
-本仓库现阶段未安装依赖、运行证明或执行并发压测。
+已完成一次独立Codex＋MiMo接入实测，见上表；未安装项目依赖、运行数学证明或执行并发压测。
