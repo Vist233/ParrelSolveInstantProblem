@@ -1,6 +1,8 @@
 # 整体架构：稳定的任务核心与可替换的执行方式
 
-日期：2026-10-24。状态：首版执行引擎已改选Codex，拟由TS后台对接app-server；其他模块划分为设计建议，未实现或压测。用户要求后端使用TypeScript，先完成数学，并保留其他领域及“同一问题尝试100次”的运行方式。本文按John Ousterhout的《软件设计的哲学》（A Philosophy of Software Design）理解用户所指书名。
+日期：2026-10-25。状态：首版执行引擎已改选Codex，拟由TS后台对接app-server；其他模块划分为设计建议，未实现或压测。用户要求后端使用TypeScript，先完成数学，并保留其他领域及“同一问题尝试100次”的运行方式。本文按John Ousterhout的《软件设计的哲学》（A Philosophy of Software Design）理解用户所指书名。
+
+2026-10-25用户明确先使用Codex，当前仅收敛该引擎的整体架构、模型接入和工具替换。具体配置和能力边界见[Codex配置与工具接入](codex-setup-and-tools.md)，此前Claude Code比较保留作参考，不作为首版实现要求。
 
 ## 设计依据
 

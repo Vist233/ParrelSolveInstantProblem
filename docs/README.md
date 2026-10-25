@@ -10,6 +10,7 @@
 
 | 文档 | 内容 | 状态 |
 | --- | --- | --- |
+| [Codex配置与工具接入](codex-setup-and-tools.md) | 首版架构、URL/API Key、Auto-review、项目Tool与内置工具替换边界 | 2026-10-25官方文档核验与配置示例，未启动 |
 | [TS封装与任务运行](runtime-wrapper.md) | 独立Goal会话、TS调用、活跃并发、过程观察、clone汇报与整理上报 | 2026-10-24接口核验与设计，未运行 |
 | [Codex与Claude Code接入比较](codex-integration.md) | 原生Goal、自动审核、外部模型协议与app-server接入 | 用户改选Codex；官方文档核验，未运行 |
 | [单Agent持续证明](continuous-proof.md) | 同会话自动续做、Lean完成门槛、三轮阻塞后上报主管 | 续跑设计，三轮规则已明确，未实现 |
