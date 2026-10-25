@@ -10,6 +10,8 @@
 
 | 文档 | 内容 | 状态 |
 | --- | --- | --- |
+| [MiMo数学方法实验](mimo-methods-experiment.md) | 三策略、十二次真实小题回归、原生轮次与Lean验收 | 2026-10-26实测，不代表未知猜想能力或通用最优 |
+| [数学方法与验收](mathematical-methods.md) | 引理、反例、复用、验收与当前小题实验含义 | 2026-10-26研究草案，字幕未取得，十二次小题回归已结束 |
 | [Codex＋MiMo实测](codex-mimo-probe.md) | 真实 Tool 调用、原生三轮 Goal 自动续做、Auto-review 协议阻塞 | 2026-10-25有界实测，Goal通过、审核未通过 |
 | [Codex配置与工具接入](codex-setup-and-tools.md) | 首版架构、URL/API Key、Auto-review、项目Tool与内置工具替换边界 | 2026-10-25官方文档核验与配置示例，未启动 |
 | [TS封装与任务运行](runtime-wrapper.md) | 独立Goal会话、TS调用、活跃并发、过程观察、clone汇报与整理上报 | 2026-10-24接口核验与设计，未运行 |
