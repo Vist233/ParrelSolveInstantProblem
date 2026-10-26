@@ -11,6 +11,8 @@
 | 文档 | 内容 | 状态 |
 | --- | --- | --- |
 | [MiMo数学方法实验](mimo-methods-experiment.md) | 三策略、十二次真实小题回归、原生轮次与Lean验收 | 2026-10-26实测，不代表未知猜想能力或通用最优 |
+| [持续Goal与整理分支](lemma-goal-and-fork.md) | 旧会话恢复、实际fork与整理Tool、候选验收边界 | 2026-10-26真实实测，分支链路通过、形式验收未接通 |
+| [Goal与工作提示草案](lemma-goal-prompts.md) | 主Goal、持续lemma研究与一次性整理指令 | v2未实测，不能宣称最优 |
 | [数学方法与验收](mathematical-methods.md) | 引理、反例、复用、验收与当前小题实验含义 | 2026-10-26研究草案，字幕未取得，十二次小题回归已结束 |
 | [Codex＋MiMo实测](codex-mimo-probe.md) | 真实 Tool 调用、原生三轮 Goal 自动续做、Auto-review 协议阻塞 | 2026-10-25有界实测，Goal通过、审核未通过 |
 | [Codex配置与工具接入](codex-setup-and-tools.md) | 首版架构、URL/API Key、Auto-review、项目Tool与内置工具替换边界 | 2026-10-25官方文档核验与配置示例，未启动 |
